@@ -21,13 +21,11 @@ The reason for the buffer is that I want someone on arrival to the page be able 
 
 First you'll need a couple of node modules, all available in the npm registry.
 
-`npm install flickr-conduit`
-
-`npm install socket.io`
+`npm install`
 
 Then start the actual occupy app:
 
-`node occupy.js`
+`npm start`
 
 You'll need to use Flickr's API (specifically flickr.push.subscribe) to set up the subscription for Flickr to start streaming updates to your server on the port that you specified for flickr-conduit in the occupy.js app.
 
