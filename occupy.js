@@ -1,24 +1,26 @@
-var io = require('socket.io').listen(1400)
-    , Conduit = require('flickr-conduit').Conduit
-;
+(function() {
+ var io, Conduit;
 
-process.on('uncaughtException', function(){});
+ io = require('socket.io').listen(1400); 
+ Conduit = require('flickr-conduit').Conduit;
 
-var globalEvent = 'occupy';
+ process.on('uncaughtException', function(){});
 
-var conduit = new Conduit();
-conduit.subscribeCallback = function(urlParts) {
+ var globalEvent = 'occupy';
+
+ var conduit = new Conduit();
+ conduit.subscribeCallback = function(urlParts) {
     return urlParts.query.challenge == 'myspecialcallbacktoken';
-}
-conduit.getEventName = function() {
+ };
+ conduit.getEventName = function() {
     return globalEvent;
-}
-conduit.listen(1401);
+ };
+ conduit.listen(1401);
 
-var buffer = [];
-var seen = {};
+ var buffer = [];
+ var seen = {};
 
-io.sockets.on('connection', function(socket) {
+ io.sockets.on('connection', function(socket) {
 
     // Give them something fun to look at...
     for (var i in buffer) {
@@ -39,10 +41,11 @@ io.sockets.on('connection', function(socket) {
 
         socket.emit('publish', img);    
     });
-});
+ });
 
 
-setInterval(function() {
+ setInterval(function() {
     console.log('Number of clients: ' + io.sockets.clients().length); 
     conduit.heartbeat(globalEvent);
-}, 10000);
+ }, 10000);
+}).call(this);
