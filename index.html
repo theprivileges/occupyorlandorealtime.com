@@ -2,12 +2,14 @@
 <html>
     <head>
         <title>#occupyrealtime</title>
+        <meta charset="UTF-8" />
         <style type="text/css">
         body {
-            font-family: sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             color: #111;
             padding: 50px;
             font-size: 16px;
+            line-height: 1;
         }
         #content {
             width: 1100px;
@@ -43,12 +45,14 @@
             <div id="message">The real-time photos will be here in real short-time. Give it a second or two.</div>
             <div id="footer">Built by <a href="http://twitter.com/nolancaudill">Nolan Caudill</a> powered by the <a href="http://www.flickr.com/">Flickr</a> cloud. Thanks, cloud.</div>
         </div>
-        <script src="http://occupyrealtime.com:1400/socket.io/socket.io.js"></script>
-        <script>
-            var img_box = document.getElementById('images');
+        <script type="text/javascript" src="//occupyrealtime.com:1400/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            var img_box = $("#images");
             var seen = {};
             var socket = io.connect("http://occupyrealtime.com:1400");
             var buffer = [];
+            var message = $("#message");
 
             function enqueue(data) {
                 buffer.unshift(data);
@@ -66,15 +70,14 @@
                 image.src = data.url.replace(/_.\.jpg$/, '_m.jpg');
 
                 // How many images are already in there?
-                var images = img_box.childNodes;
+                var images = img_box.children();
                 if (images.length > 0) {
-                    img_box.insertBefore(link, images[0]);
+                    $(images).first().prepend(link);
                 } else {
-                    document.getElementById('message').style.display = "none";
-                    img_box.appendChild(link);    
+                    message.hide(); 
+                    img_box.append(link);
                 }
-
-                link.appendChild(image);
+                $(link).append(image).hide().fadeIn(3000);
             }
 
             socket.on('publish', function(data) {
