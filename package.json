@@ -2,14 +2,14 @@
   "scripts": {
     "start": "node occupy.js"
   },
-  "author": "Nolan Caudill (http://nolancaudill.com)",
-  "name": "occupyrealtime.com",
-  "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with either \"occupywallstreet\" or \"ows\" and displays them.",
-  "version": "0.0.1",
-  "homepage": "http://occupyrealtime.com/",
+  "author": "Luiz Lopes <luizlopes@gmail.com> (http://www.wickeddeveloper.com)",
+  "name": "occupyorlandorealtime.com",
+  "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with \"occupyorlando\",
+  "version": "0.1.0",
+  "homepage": "http://occupyorlandorealtime.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mncaudill/occupyrealtime.com.git"
+    "url": "git://github.com/theprivileges/occupyorlandorealtime.com.git"
   },
   "main": "occupy",
   "engines": {
@@ -19,5 +19,15 @@
     "flickr-conduit": "~0.1.4",
     "socket.io": "~0.8.5"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "contributors": [
+    "occupyorlandorealtime.com",
+    "===",
+    "Original author",
+    "---",
+    "Nolan Caudill   https://github.com/mncaudill    @nolancaudill",
+    "Current author",
+    "---",
+    "Luiz Lopes  https://github.com/theprivileges    @theprivileges"
+  ]
 }
