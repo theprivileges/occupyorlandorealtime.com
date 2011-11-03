@@ -1,13 +1,15 @@
-#occupyrealtime: a real-time stream of #occupywallstreet photos
+#occupyorlandorealtime: a real-time stream of #occupyorlando photos
 ======================
 
-Author: Nolan Caudill
+Author: [Nolan Caudill](http://twitter.com/nolancaudill)
 Date: 2011-10-18
+
+Maintainer: [Luiz Lopes](http://twitter.com/theprivileges)
 
 ## Description
 
-occupyrealtime.com is a simple site that streams, in real-time, all Flickr photos that are tagged
-with either "occupywallstreet" or "ows" and displays them.
+[occupyorlandorealtime.com](http://www.occupyorlandorealtime.com) is a simple site that streams, in real-time, all Flickr photos that are tagged
+with either "occupyorlando" and displays them.
 
 This uses Flickr's [real-time push feeds](http://laughingmeme.org/2011/07/24/getting-started-with-flickr-real-time-apis-in-php/) and [flickr-conduit](https://github.com/mncaudill/flickr-conduit).
 
@@ -32,10 +34,6 @@ Then to start the actual occupy app:
 You'll need to use Flickr's API (specifically flickr.push.subscribe) to set up the subscription for Flickr to start streaming updates to your server on the port that you specified for flickr-conduit in the occupy.js app.
 
 The index.html is hard-coded to still point to occupyrealtime.com (my server), so this page will work since my stuff is still running, but if you want to point it to your own server you'll need to update the JS.
-
-## Thanks
-
-Thanks to [Luiz Lopes](https://github.com/theprivileges/) for his patch to add the npm json file.
 
 ## License
 
