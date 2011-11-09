@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node occupy.js"
   },
-  "author": "Luiz Lopes <luizlopes@gmail.com> (http://www.wickeddeveloper.com)",
+  "author": "Nolan Caudill (http://nolancaudill.com)",
   "name": "occupyorlandorealtime.com",
   "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with \"occupyorlando\"",
   "version": "0.1.0",
