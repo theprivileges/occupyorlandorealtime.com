@@ -4,7 +4,7 @@
   },
   "author": "Luiz Lopes <luizlopes@gmail.com> (http://www.wickeddeveloper.com)",
   "name": "occupyorlandorealtime.com",
-  "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with \"occupyorlando\",
+  "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with \"occupyorlando\"",
   "version": "0.1.0",
   "homepage": "http://occupyorlandorealtime.com",
   "repository": {
@@ -16,12 +16,24 @@
     "node": "~0.4.11"
   },
   "dependencies": {
-    "flickr-conduit": "~0.1.4",
-    "socket.io": "~0.8.5"
+    "flickr-conduit": "0.1.4",
+    "socket.io": "0.8.5"
   },
   "devDependencies": {},
+  "maintainers" : [
+    {
+        "name" : "Luiz Lopes",
+        "web"  : "http://www.wickeddeveloper.com"
+    }
+  ],
   "contributors": [
-    "Nolan Caudill   https://github.com/mncaudill    @nolancaudill",
-    "Luiz Lopes  https://github.com/theprivileges    @theprivileges"
+   {
+    "name" : "Nolan Caudill",
+    "web"  : "https://github.com/mncaudill"
+   },
+   {
+    "name" : "Luiz Lopes",
+    "web"  : "http://www.wickeddeveloper.com"
+   }
   ]
 }
