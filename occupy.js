@@ -10,7 +10,7 @@
 
  var conduit = new Conduit();
  conduit.subscribeCallback = function(urlParts) {
-    return urlParts.query.challenge == 'myspecialcallbacktoken';
+    return urlParts.query.verify_token == 'myspecialcallbacktoken';
  };
  conduit.getEventName = function() {
     return globalEvent;
