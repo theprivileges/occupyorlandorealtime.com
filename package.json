@@ -5,8 +5,9 @@
   "author": "Nolan Caudill (http://nolancaudill.com)",
   "name": "occupyorlandorealtime.com",
   "description": "a simple site that streams, in real-time, all Flickr photos that are tagged with \"occupyorlando\"",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://occupyorlandorealtime.com",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/theprivileges/occupyorlandorealtime.com.git"
